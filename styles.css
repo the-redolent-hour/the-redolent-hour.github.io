@@ -669,19 +669,19 @@ footer {
   }
 
   .hero-the {
-  margin-bottom: -0.68em;
-  font-size: clamp(2.5rem, 10vw, 3.8rem);
+  margin-bottom: -0.4em;
+  font-size: 3rem;
 }
 
 .hero-name {
-  max-width: 108vw;
-  font-size: clamp(4.25rem, 17.5vw, 7rem);
-  letter-spacing: -0.085em;
-  transform: scaleX(0.88);
+  gap: 0.02em;
+  font-size: 4.65rem;
+  transform: scaleX(0.92);
 }
 
 .hero-initial {
-  font-size: 1.48em;
+  font-size: 1.5em;
+  margin-right: -0.2em;
 }
 
 .initial-r {
