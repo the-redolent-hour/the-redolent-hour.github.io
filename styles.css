@@ -7,9 +7,9 @@
   --amber: #a86538;
   --copper: #7d432e;
   --glass: rgba(21, 16, 13, .48);
-  --serif: "Cormorant Garamond", Georgia, serif;
-  --display: "Bodoni Moda", Georgia, serif;
-  --script: "Pinyon Script", cursive;
+  --serif: "Noto Serif Display", Georgia, serif;
+  --display: "Noto Serif Display", Georgia, serif;
+  --script: "Lavishly Yours", cursive;
   --sans: "Manrope", Arial, sans-serif;
 }
 
@@ -160,40 +160,7 @@ button {
   text-align: center;
 }
 
-.hero-title {
-  margin: .7rem 0 1.65rem;
-  display: grid;
-  justify-items: center;
-  line-height: 1;
-  text-align: center;
-  text-shadow: 0 8px 36px rgba(0,0,0,.62);
-}
 
-.hero-the {
-  position: relative;
-  z-index: 2;
-  margin-bottom: -1.15rem;
-  font-family: var(--display);
-  font-size: clamp(2.9rem, 6vw, 5.4rem);
-  font-weight: 400;
-  letter-spacing: -.055em;
-}
-
-.hero-script {
-  position: relative;
-  z-index: 1;
-  display: block;
-  font-family: var(--script);
-  font-size: clamp(6.2rem, 15vw, 13rem);
-  font-weight: 400;
-  line-height: .78;
-  letter-spacing: -.035em;
-  white-space: nowrap;
-  transform: rotate(-1.2deg);
-  text-shadow:
-    0 7px 28px rgba(0,0,0,.66),
-    0 0 22px rgba(255,245,230,.08);
-}
 
 .eyebrow {
   margin: 0;
@@ -267,6 +234,72 @@ button {
   100% { transform: translate3d(8%, -8%, 0) rotate(-5deg) scale(1.08); }
 }
 
+.hero-title {
+  margin: 0.6rem 0 1.7rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+  line-height: 1;
+  text-shadow:
+    0 8px 32px rgba(0, 0, 0, 0.72),
+    0 0 18px rgba(255, 245, 230, 0.08);
+}
+
+.hero-the {
+  position: relative;
+  z-index: 3;
+  margin-bottom: -0.72em;
+  font-family: var(--display);
+  font-size: clamp(2.8rem, 6vw, 5.2rem);
+  font-weight: 400;
+  font-stretch: extra-condensed;
+  letter-spacing: -0.075em;
+  line-height: 1;
+}
+.hero-name {
+  position: relative;
+  z-index: 2;
+  display: inline-flex;
+  align-items: baseline;
+  justify-content: center;
+  white-space: nowrap;
+  font-family: var(--display);
+  font-size: clamp(4.8rem, 11vw, 9.6rem);
+  font-weight: 400;
+  font-stretch: extra-condensed;
+  line-height: 0.78;
+  letter-spacing: -0.075em;
+  transform: scaleX(0.92);
+}
+
+.hero-rest {
+  font-family: var(--display);
+  font-weight: 400;
+  font-stretch: extra-condensed;
+}
+
+.hero-initial {
+  position: relative;
+  display: inline-block;
+  font-family: var(--script);
+  font-size: 1.45em;
+  font-weight: 400;
+  line-height: 0;
+  letter-spacing: 0;
+}
+
+.initial-r {
+  margin-right: -0.18em;
+  transform: translateY(0.06em);
+}
+
+.initial-h {
+  margin-left: 0.04em;
+  margin-right: -0.2em;
+  transform: translateY(0.06em);
+}
 .scroll-marker {
   position: absolute;
   bottom: 28px;
@@ -639,16 +672,29 @@ footer {
   }
 
   .hero-the {
-    margin-bottom: -.65rem;
-    font-size: clamp(2.55rem, 10vw, 4rem);
-  }
+  margin-bottom: -0.68em;
+  font-size: clamp(2.5rem, 10vw, 3.8rem);
+}
 
-  .hero-script {
-    max-width: 98vw;
-    font-size: clamp(5.6rem, 22vw, 8.8rem);
-    line-height: .78;
-    white-space: normal;
-  }
+.hero-name {
+  max-width: 108vw;
+  font-size: clamp(4.25rem, 17.5vw, 7rem);
+  letter-spacing: -0.085em;
+  transform: scaleX(0.88);
+}
+
+.hero-initial {
+  font-size: 1.48em;
+}
+
+.initial-r {
+  margin-right: -0.19em;
+}
+
+.initial-h {
+  margin-left: 0.02em;
+  margin-right: -0.21em;
+}
 
   .tagline {
     max-width: 88vw;
