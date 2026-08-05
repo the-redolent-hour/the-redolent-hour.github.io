@@ -155,8 +155,8 @@ button {
 }
 
 .hero-copy {
-  width: min(92vw, 1000px);
-  padding: 16vh 4vw 10vh;
+  width: min(88vw, 760px);
+  padding: 18vh 4vw 12vh;
   text-align: center;
 }
 
@@ -668,22 +668,22 @@ footer {
     background-position: center 43%;
   }
 
-  .hero-the {
-  margin-bottom: -0.4em;
-  font-size: 3rem;
+.hero-the {
+  margin-bottom: -0.28em;
+  font-size: 2.35rem;
 }
 
 .hero-name {
-  gap: 0.02em;
-  font-size: 4.65rem;
-  transform: scaleX(0.92);
+  gap: 0;
+  font-size: 3.65rem;
+  transform: scaleX(0.88);
 }
 
 .hero-initial {
-  font-size: 1.5em;
-  margin-right: -0.2em;
+  font-size: 1.18em;
+  margin-right: -0.15em;
 }
-
+  
 .initial-r {
   margin-right: -0.19em;
 }
