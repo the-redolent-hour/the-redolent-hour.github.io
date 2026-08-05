@@ -8,7 +8,8 @@
   --copper: #7d432e;
   --glass: rgba(21, 16, 13, .48);
   --serif: "Cormorant Garamond", Georgia, serif;
-  --display: "Italiana", Georgia, serif;
+  --display: "Bodoni Moda", Georgia, serif;
+  --script: "Pinyon Script", cursive;
   --sans: "Manrope", Arial, sans-serif;
 }
 
@@ -159,26 +160,39 @@ button {
   text-align: center;
 }
 
-.hero h1 {
-  margin: .9rem 0 1.35rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  line-height: .74;
+.hero-title {
+  margin: .7rem 0 1.65rem;
+  display: grid;
+  justify-items: center;
+  line-height: 1;
+  text-align: center;
+  text-shadow: 0 8px 36px rgba(0,0,0,.62);
 }
 
-.hero h1 span {
+.hero-the {
+  position: relative;
+  z-index: 2;
+  margin-bottom: -1.15rem;
   font-family: var(--display);
-  font-size: clamp(2.8rem, 6vw, 5.6rem);
-  font-weight: 400;
-}
-
-.hero h1 strong {
-  font-family: var(--serif);
-  font-size: clamp(5rem, 12vw, 10.5rem);
+  font-size: clamp(2.9rem, 6vw, 5.4rem);
   font-weight: 400;
   letter-spacing: -.055em;
-  text-shadow: 0 8px 36px rgba(0,0,0,.56);
+}
+
+.hero-script {
+  position: relative;
+  z-index: 1;
+  display: block;
+  font-family: var(--script);
+  font-size: clamp(6.2rem, 15vw, 13rem);
+  font-weight: 400;
+  line-height: .78;
+  letter-spacing: -.035em;
+  white-space: nowrap;
+  transform: rotate(-1.2deg);
+  text-shadow:
+    0 7px 28px rgba(0,0,0,.66),
+    0 0 22px rgba(255,245,230,.08);
 }
 
 .eyebrow {
@@ -624,14 +638,16 @@ footer {
     background-position: center 43%;
   }
 
-  .hero h1 span {
-    font-size: clamp(2.5rem, 11vw, 4rem);
+  .hero-the {
+    margin-bottom: -.65rem;
+    font-size: clamp(2.55rem, 10vw, 4rem);
   }
 
-  .hero h1 strong {
-    max-width: 95vw;
-    font-size: clamp(4.6rem, 19vw, 7.6rem);
-    line-height: .76;
+  .hero-script {
+    max-width: 98vw;
+    font-size: clamp(5.6rem, 22vw, 8.8rem);
+    line-height: .78;
+    white-space: normal;
   }
 
   .tagline {
@@ -709,4 +725,4 @@ footer {
     transform: none;
     filter: none;
   }
-    }
+}
