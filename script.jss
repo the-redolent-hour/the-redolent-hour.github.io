@@ -1,33 +1,169 @@
-const header = document.querySelector('.site-header');
-const toggle = document.querySelector('.menu-toggle');
-const nav = document.querySelector('.nav');
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#090706">
+  <meta name="description" content="The Redolent Hour — perfume, tea, and sensory culture.">
+  <title>The Redolent Hour</title>
 
-window.addEventListener('scroll', () => {
-  header.classList.toggle('scrolled', window.scrollY > 20);
-});
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Italiana&family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet">
 
-toggle.addEventListener('click', () => {
-  const open = nav.classList.toggle('open');
-  toggle.setAttribute('aria-expanded', String(open));
-  toggle.textContent = open ? 'Close' : 'Menu';
-});
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="noise" aria-hidden="true"></div>
 
-nav.querySelectorAll('a').forEach(link => {
-  link.addEventListener('click', () => {
-    nav.classList.remove('open');
-    toggle.setAttribute('aria-expanded', 'false');
-    toggle.textContent = 'Menu';
-  });
-});
+  <header class="site-header">
+    <a class="wordmark" href="#top">The Redolent Hour</a>
 
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('visible');
-      observer.unobserve(entry.target);
-    }
-  });
-}, { threshold: 0.12 });
+    <button class="menu-button" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span>
+    </button>
 
-document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-document.getElementById('year').textContent = new Date().getFullYear();
+    <nav class="nav">
+      <a href="#journal">Journal</a>
+      <a href="#fragrance">Fragrance</a>
+      <a href="#tea">Tea</a>
+      <a href="#about">About</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-bg" aria-hidden="true"></div>
+      <div class="hero-vignette" aria-hidden="true"></div>
+      <div class="hero-smoke smoke-one" aria-hidden="true"></div>
+      <div class="hero-smoke smoke-two" aria-hidden="true"></div>
+
+      <div class="hero-copy">
+        <p class="eyebrow reveal">A journal of perfume and tea</p>
+        <h1 class="reveal delay-1">
+          <span>The</span>
+          <strong>Redolent Hour</strong>
+        </h1>
+        <p class="tagline reveal delay-2">
+          Where scent meets steep, time softens into something deep.
+        </p>
+        <a class="enter reveal delay-3" href="#journal">
+          Enter the journal
+          <span>↓</span>
+        </a>
+      </div>
+
+      <div class="scroll-marker">
+        <span></span>
+      </div>
+    </section>
+
+    <section class="intro section">
+      <div class="intro-label reveal">
+        <span>01</span>
+        <span>Editorial premise</span>
+      </div>
+      <p class="intro-copy reveal delay-1">
+        Fragrance and tea considered through memory, atmosphere,
+        ritual, composition, and the pleasures of attention.
+      </p>
+    </section>
+
+    <section id="journal" class="journal section">
+      <div class="section-head reveal">
+        <div>
+          <span class="number">02</span>
+          <p class="eyebrow">Latest writing</p>
+        </div>
+        <h2>The journal</h2>
+      </div>
+
+      <div class="article-grid">
+        <article class="article-card reveal">
+          <a href="articles/rose-after-rain.html" class="card-link" aria-label="Read Rose After Rain"></a>
+          <div class="card-image rose-card"></div>
+          <div class="glass-panel">
+            <div class="card-meta">
+              <span>Fragrance</span>
+              <span>6 min</span>
+            </div>
+            <h3>Rose After Rain</h3>
+            <p>Damp petals, chilled air, and the intimacy of restraint.</p>
+            <span class="read">Read essay ↗</span>
+          </div>
+        </article>
+
+        <article class="article-card reveal delay-1">
+          <a href="articles/black-tea-bergamot.html" class="card-link" aria-label="Read Black Tea, Bergamot"></a>
+          <div class="card-image tea-card"></div>
+          <div class="glass-panel">
+            <div class="card-meta">
+              <span>Tea</span>
+              <span>5 min</span>
+            </div>
+            <h3>Black Tea, Bergamot</h3>
+            <p>Bitterness, citrus, heat, and the architecture of a cup.</p>
+            <span class="read">Read essay ↗</span>
+          </div>
+        </article>
+
+        <article class="article-card reveal delay-2">
+          <a href="#" class="card-link" aria-label="Coming soon"></a>
+          <div class="card-image ritual-card"></div>
+          <div class="glass-panel">
+            <div class="card-meta">
+              <span>Ritual</span>
+              <span>Coming soon</span>
+            </div>
+            <h3>The Hour Before Evening</h3>
+            <p>On repetition, anticipation, and the objects that hold a mood.</p>
+            <span class="read">Soon</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="two-worlds">
+      <article id="fragrance" class="world fragrance-world reveal">
+        <div class="world-glow"></div>
+        <span class="number">03</span>
+        <p class="eyebrow">Fragrance</p>
+        <h2>Notes worn<br>close to skin.</h2>
+        <p>Reviews, ingredients, memory, and the language of scent.</p>
+        <a href="#journal">Browse fragrance ↗</a>
+      </article>
+
+      <article id="tea" class="world tea-world reveal delay-1">
+        <div class="world-glow"></div>
+        <span class="number">04</span>
+        <p class="eyebrow">Tea</p>
+        <h2>Leaves given<br>time to speak.</h2>
+        <p>Tasting notes, steeping rituals, pairings, and atmosphere.</p>
+        <a href="#journal">Browse tea ↗</a>
+      </article>
+    </section>
+
+    <section id="about" class="about section">
+      <div class="about-title reveal">
+        <span class="number">05</span>
+        <p class="eyebrow">About</p>
+      </div>
+      <div class="about-copy reveal delay-1">
+        <h2>For the fragrant,<br>the steeped,<br>the remembered.</h2>
+        <p>
+          The Redolent Hour is an independent publication devoted to formal
+          writing on perfume, tea, and sensory culture.
+        </p>
+        <a href="#" class="underlined">Informal reviews on Fragrantica ↗</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <span>© <span id="year"></span> The Redolent Hour</span>
+    <span>Perfume · Tea · Atmosphere</span>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
