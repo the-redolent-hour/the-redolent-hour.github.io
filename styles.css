@@ -680,17 +680,16 @@ footer {
 }
 
 .hero-initial {
-  font-size: 1.08em;
-  margin-right: -0.08em;
+  font-size: 1.22em;
+  margin-right: -0.10em;
 }
   
 .initial-r {
-  margin-right: -0.19em;
+  font-size: 1.20em;
 }
 
 .initial-h {
-  margin-left: 0.02em;
-  margin-right: -0.21em;
+  font-size: 1.28em;
 }
 
   .tagline {
