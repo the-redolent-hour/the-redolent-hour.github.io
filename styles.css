@@ -674,13 +674,13 @@ footer {
 }
 
 .hero-name {
-  gap: 0;
+  gap: 0.12;
   font-size: 3.65rem;
   transform: scaleX(0.88);
 }
 
 .hero-initial {
-  font-size: 1.05em;
+  font-size: 1.07em;
   margin-right: -0.15em;
 }
   
