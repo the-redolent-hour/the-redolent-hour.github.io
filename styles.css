@@ -674,7 +674,7 @@ footer {
 }
 
 .hero-name {
-  gap: 0.12;
+  gap: 0.22;
   font-size: 3.65rem;
   transform: scaleX(0.88);
 }
