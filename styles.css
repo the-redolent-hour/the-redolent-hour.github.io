@@ -630,8 +630,16 @@ footer {
   .article-card {
     min-height: 520px;
   }
+  }
+
+/* TABBY / TABLET */
+@media (min-width: 721px) and (max-width: 1200px) {
+  .hero-name {
+    gap: 0.22em;
+  }
 }
 
+/* MOBILE */
 @media (max-width: 720px) {
   .site-header {
     min-height: 64px;
