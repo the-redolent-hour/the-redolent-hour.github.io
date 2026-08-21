@@ -634,8 +634,10 @@ footer {
 
 /* TABBY / TABLET */
 @media (min-width: 721px) and (max-width: 1600px) and (hover: none) {
+  .hero-name {
+    gap: 0.22em;
+  }
 }
-
 /* MOBILE */
 @media (max-width: 720px) {
   .site-header {
